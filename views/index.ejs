@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+</head>
+<body>
+    <form action="/api/v1/qr" method="post">
+    Url: <input name="url"/>
+    <button type="submit">submit</button>
+    </form>
+
+    <% if (qrurl) { %>
+        <img src="<%- qrurl %>" alt="" srcset="">    
+    <%} %>
+</body>
+</html>
